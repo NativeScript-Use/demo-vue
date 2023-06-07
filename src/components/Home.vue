@@ -1,9 +1,11 @@
 <script lang="ts" setup>
 import {
-  $navigateTo,
+  $navigateTo
 } from 'nativescript-vue';
+import { StackLayout } from "@nativescript/core";
 import ElementSizeView from "~/components/ElementSizeView.vue";
 import ColorModeView from "~/components/ColorModeView.vue";
+import EventListenerComponent from "~/components/EventListenerComponent.vue";
 
 function onUseElementSize() {
   $navigateTo(ElementSizeView)
@@ -12,16 +14,21 @@ function onUseColorMode() {
   $navigateTo(ColorModeView)
 }
 
+function onUseEventListener() {
+  $navigateTo(EventListenerComponent)
+}
+
 </script>
 
 <template>
-  <Frame backgroundColor="transparent" >
+  <Frame backgroundColor="transparent">
     <Page actionBarHidden="true">
-      <StackLayout class="px-4">
+      <StackLayout ref="test" class="px-4">
         <Label text="NativeScript-VueUse APP" class="text-2xl font-bold mt-3" />
 
         <Button @tap="onUseElementSize" text="UseElementSize" class="mt-12 m-1"></Button>
         <Button @tap="onUseColorMode" text="UseColorMode" class="mt-8 m-1"></Button>
+        <Button @tap="onUseEventListener" text="UseEventListener" class="mt-8 m-1"></Button>
       </StackLayout>
     </Page>
   </Frame>
