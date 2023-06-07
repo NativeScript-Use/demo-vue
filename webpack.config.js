@@ -12,6 +12,9 @@ module.exports = (env) => {
                 resolve(__dirname, '../publish')
             );
         }
+
+        config.resolve.alias.set('@nativescript/core', '@akylas/nativescript')
+
     });
 
     return webpack.resolveConfig();

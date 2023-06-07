@@ -11,7 +11,7 @@
     "postinstall": "npm link ../publish"
   },
   "dependencies": {
-    "@nativescript/core": "~8.5.0",
+    "@akylas/nativescript": "^8.5.2",
     "@vallemar/nativescript-vueuse": "0.0.6",
     "nativescript-vue": "3.0.0-beta.8"
   },
@@ -19,6 +19,7 @@
     "@nativescript-dom/core-types": "^1.0.26",
     "@nativescript-dom/vue-types": "^1.0.15",
     "@nativescript/android": "8.5.0",
+    "@nativescript/core": "^8.5.3",
     "@nativescript/ios": "8.5.2",
     "@nativescript/preview-cli": "^1.0.2",
     "@nativescript/stackblitz": "^0.0.7",

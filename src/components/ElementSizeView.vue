@@ -7,7 +7,7 @@ const { width, height } = useElementSize(refView);
 
 function changeSize() {
   const view = unrefView(refView);
-  view.animate({
+  view?.animate({
     height: view.getActualSize().height === 400 ? 150 : 400,
     duration: 2000
   })
@@ -17,7 +17,7 @@ function changeSize() {
 <template>
   <Page actionBarHidden="true">
     <StackLayout  class="p-4">
-      <StackLayout ref="refView" class="bg-gray-300 rounded-2xl p-3 text-center">
+      <StackLayout originY="0" ref="refView" class="bg-gray-300 rounded-2xl p-3 text-center">
         <Label :text="`Width: ${width}`" />
         <Label :text="`Height: ${height}`"  />
       </StackLayout>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .ns-light {
-  Page {
+  Page, ListView {
     background-color: #dcdcdc;
   }
   Label {
@@ -12,7 +12,7 @@
 }
 
 .ns-dark {
-  Page {
+  Page, ListView {
     background-color: black;
   }
   Label {
@@ -21,7 +21,7 @@
 }
 
 .ns-dim {
-  Page {
+  Page, ListView {
     background-color: #C4DFDF;
   }
   Label {
@@ -30,7 +30,7 @@
 }
 
 .ns-cafe {
-  Page {
+  Page, ListView {
     background-color: #884A39;
   }
   Label {
