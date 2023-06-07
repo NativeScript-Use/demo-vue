@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@akylas/nativescript": "^8.5.2",
-    "@vallemar/nativescript-vueuse": "^0.0.8",
+    "@vallemar/nativescript-vueuse": "^0.0.9",
     "nativescript-vue": "3.0.0-beta.8"
   },
   "devDependencies": {
