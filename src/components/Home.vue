@@ -5,9 +5,8 @@ import {
 import ElementSizeView from "~/components/ElementSizeView.vue";
 import ColorModeView from "~/components/ColorModeView.vue";
 
-
 function onUseElementSize() {
-    $navigateTo(ElementSizeView)
+  $navigateTo(ElementSizeView)
 }
 function onUseColorMode() {
   $navigateTo(ColorModeView)
@@ -17,12 +16,12 @@ function onUseColorMode() {
 
 <template>
   <Frame backgroundColor="transparent" >
-    <Page>
-      <StackLayout rows="*, auto, auto, *" class="px-4">
-        <Label ref="refView" text="" class="light:text-white dark:text-blue-500 dim:text-green-500 cafe:text-yellow-500" />
+    <Page actionBarHidden="true">
+      <StackLayout class="px-4">
+        <Label text="NativeScript-VueUse APP" class="text-2xl font-bold mt-3" />
 
-        <Button @tap="onUseElementSize" text="UseElementSize" class="bg-white mt-12"></Button>
-        <Button @tap="onUseColorMode" text="UseColorMode" class="bg-white mt-12"></Button>
+        <Button @tap="onUseElementSize" text="UseElementSize" class="mt-12 m-1"></Button>
+        <Button @tap="onUseColorMode" text="UseColorMode" class="mt-8 m-1"></Button>
       </StackLayout>
     </Page>
   </Frame>

@@ -2,38 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .ns-light {
-  Page, ListView {
-    background-color: #dcdcdc;
-  }
-  Label {
-    color: gray;
-  }
+  --bg: #f1f1f1;
+  --bg-variant: #e3e3e3;
+  --text-color: black;
 }
 
 .ns-dark {
-  Page, ListView {
-    background-color: black;
-  }
-  Label {
-    color: white;
-  }
+  --bg: #0f0b15;
+  --bg-variant: #292e3a;
+  --text-color: #9bd1c3;
 }
 
 .ns-dim {
-  Page, ListView {
-    background-color: #C4DFDF;
-  }
-  Label {
-    color: #F8F6F4;
-  }
+  --bg: #c4dfdf;
+  --bg-variant: #8ea8a8;
+  --text-color: #252525;
 }
 
 .ns-cafe {
-  Page, ListView {
-    background-color: #884A39;
-  }
-  Label {
-    color: #F9E0BB;
-  }
+  --bg: #884a39;
+  --bg-variant: #c07c68;
+  --text-color: #ffe6d8;
+}
+
+Page, ListView {
+  background-color: var(--bg);
+}
+
+Label {
+  color: var(--text-color);
+}
+
+Button{
+  border-radius: 100;
+  background-color: var(--bg-variant);
+  color: var(--text-color);
+}
+
+.bg{
+  background: var(--bg);
+}
+
+.bg-variant{
+  background: var(--bg-variant);
 }

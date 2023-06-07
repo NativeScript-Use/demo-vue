@@ -18,17 +18,17 @@ function changeTheme(newTheme: string) {
 
 <template>
   <Page actionBarHidden="true">
-    <StackLayout class="p-4">
+    <StackLayout class="py-4 pl-3">
       <Label :text="`Current Theme: ${store}`"/>
 
       <ListView :items="THEMES" height="800">
         <template #default="{ item, index }: ListItem<string>">
           <FlexboxLayout
-              class="px-2 py-4"
+              class="pl-2 py-4"
               @tap="changeTheme(item)"
           >
-
-            <Label class="text-lg rounded-2xl px-2 py-1" :class="[item === store ? 'bg-green-400' : '']" :text="item"/>
+            <Label class="h-[16] w-[16] bg-green-400 rounded-full" :class="[item === store ? 'opacity-1' : 'opacity-0']"/>
+            <Label class="text-lg rounded-2xl ml-2 py-1" :text="item"/>
           </FlexboxLayout>
         </template>
       </ListView>
