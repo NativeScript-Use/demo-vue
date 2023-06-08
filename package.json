@@ -3,6 +3,7 @@
   "main": "src/app.ts",
   "version": "1.0.0",
   "private": true,
+  "preview": "https://stackblitz.com/edit/nativescript-vueuse-demo?file=src%2Fapp.ts",
   "scripts": {
     "android": "ns run android --env.watchNodeModules",
     "ios": "ns run ios --env.watchNodeModules",
