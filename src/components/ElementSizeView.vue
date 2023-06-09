@@ -7,10 +7,9 @@ const { width, height } = useElementSize(refView);
 
 function changeSize() {
   const view = unrefView(refView);
-  view?.animate({
-    height: view.getActualSize().height === 400 ? 150 : 400,
-    duration: 2000
-  })
+  if(view){
+    view.height = view.getActualSize().height === 400 ? 150 : 400;
+  }
 }
 </script>
 

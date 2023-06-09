@@ -1,10 +1,13 @@
 import { createApp } from 'nativescript-vue';
-import { useColorMode } from "@vallemar/nativescript-vueuse";
+import { useColorMode, useColorPalette } from "@vallemar/nativescript-vueuse";
 import Home from './components/Home.vue';
-import { THEMES } from "~/data";
+import { PALETTES, THEMES } from "~/data";
 
+/* Init Color mode and Palette */
 useColorMode({
-    modes: THEMES
-})
+    modes: THEMES,
+    initialValue: 'dim'
+});
+useColorPalette({ palettes: PALETTES });
 
 createApp(Home).start();
