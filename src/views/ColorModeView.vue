@@ -1,8 +1,8 @@
 <script lang="ts" setup>
+import CustomPage from "@/components/CustomPage.vue";
 import { ListItem } from "nativescript-vue";
 import { useColorMode, useColorPalette } from "@vallemar/nativescript-vueuse";
 import { Patelle, THEMES } from "~/data";
-import CustomPage from "./CustomPage.vue";
 
 const { schema } = useColorMode({
   onChanged: (mode) => {

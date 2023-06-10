@@ -1,6 +1,6 @@
 <script lang="ts" setup>
+import CustomPage from "@/components/CustomPage.vue";
 import { useScreenOrientation } from '@vallemar/nativescript-vueuse';
-import CustomPage from './CustomPage.vue';
 
 const {
   orientation,

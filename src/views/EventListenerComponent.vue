@@ -1,8 +1,8 @@
 <script lang="ts" setup>
+import CustomPage from "@/components/CustomPage.vue";
 import { ref } from "nativescript-vue";
 import { alert, StackLayout } from "@nativescript/core";
 import { useEventListener } from "@vallemar/nativescript-vueuse";
-import CustomPage from "./CustomPage.vue";
 
 const el = ref()
 

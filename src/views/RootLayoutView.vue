@@ -1,12 +1,10 @@
 <script lang="ts" setup>
-import { ref, onMounted } from 'nativescript-vue'
+import BottomSheet from "@/components/rootLayout/BottomSheet.vue";
+import Modal from '@/components/rootLayout/Modal.vue';
+import SideBar from '@/components/rootLayout/SideBar.vue';
+import SnackBar from '@/components/rootLayout/SnackBar.vue';
+import CustomPage from "@/components/CustomPage.vue";
 import { useRootLayout } from '@vallemar/nativescript-vueuse'
-import BottomSheet from "./BottomSheet.vue";
-import Modal from './Modal.vue';
-import SideBar from './SideBar.vue';
-import SnackBar from './SnackBar.vue';
-import CustomPage from '../CustomPage.vue';
-
 
 const { show: showBottomSheet } = useRootLayout(BottomSheet, {
   rootLayoutOption: {
