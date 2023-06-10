@@ -5,6 +5,7 @@ import BottomSheet from "./BottomSheet.vue";
 import Modal from './Modal.vue';
 import SideBar from './SideBar.vue';
 import SnackBar from './SnackBar.vue';
+import CustomPage from '../CustomPage.vue';
 
 
 const { show: showBottomSheet } = useRootLayout(BottomSheet, {
@@ -101,7 +102,7 @@ const { show: showSnackbar } = useRootLayout(SnackBar, {
 </script>
 
 <template>
-  <Page actionBarHidden="true">
+  <CustomPage>
     <RootLayout>
       <StackLayout class="p-3">
         <Label class="text-center text-2xl">RootLayout example</Label>
@@ -109,8 +110,7 @@ const { show: showSnackbar } = useRootLayout(SnackBar, {
         <Button @tap="showModal" class="mx-1 mt-8" text="Open Modal"></Button>
         <Button @tap="showSideBar" class="mx-1 mt-8" text="Open Sidebar"></Button>
         <Button @tap="showSnackbar" class="mx-1 mt-8" text="Open Snackbar"></Button>
-
       </StackLayout>
     </RootLayout>
-  </Page>
+  </CustomPage>
 </template>

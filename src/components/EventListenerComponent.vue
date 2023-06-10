@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import { ref } from "nativescript-vue";
-import {alert, StackLayout} from "@nativescript/core";
+import { alert, StackLayout } from "@nativescript/core";
 import { useEventListener } from "@vallemar/nativescript-vueuse";
+import CustomPage from "./CustomPage.vue";
 
 const el = ref()
 
@@ -19,11 +20,11 @@ const { cleanup } = useEventListener<StackLayout>(el, {
 </script>
 
 <template>
-  <Page actionBarHidden="true">
+  <CustomPage>
     <StackLayout class="p-4">
       <FlexboxLayout ref="el" class="bg-variant rounded-2xl p-3 text-center h-[200] items-center justify-center">
         <Label class="text-2xl">Tap Me!</Label>
       </FlexboxLayout>
     </StackLayout>
-  </Page>
+  </CustomPage>
 </template>

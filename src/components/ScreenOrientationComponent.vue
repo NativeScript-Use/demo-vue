@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useScreenOrientation } from '@vallemar/nativescript-vueuse';
+import CustomPage from './CustomPage.vue';
 
 const {
   orientation,
@@ -15,7 +16,7 @@ const {
 </script>
 
 <template>
-  <Page actionBarHidden="true">
+  <CustomPage>
     <ScrollView>
       <StackLayout class="p-3">
         <Label class="text-center text-2xl">ScreenOrientation {{ orientation }}</Label>
@@ -27,5 +28,5 @@ const {
         <Button @tap="disableRotation" class="mx-1 mt-8" text="Disable rotation"></Button>
       </StackLayout>
     </ScrollView>
-  </Page>
+  </CustomPage>
 </template>

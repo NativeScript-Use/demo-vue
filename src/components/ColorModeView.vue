@@ -2,6 +2,7 @@
 import { ListItem } from "nativescript-vue";
 import { useColorMode, useColorPalette } from "@vallemar/nativescript-vueuse";
 import { Patelle, THEMES } from "~/data";
+import CustomPage from "./CustomPage.vue";
 
 const { schema } = useColorMode({
   onChanged: (mode) => {
@@ -18,7 +19,7 @@ function changeTheme(newTheme: any) {
 </script>
 
 <template>
-  <Page actionBarHidden="true">
+  <CustomPage>
     <StackLayout class="py-4 pl-3">
       <Label :text="`Current Theme: ${schema}`" />
 
@@ -46,5 +47,5 @@ function changeTheme(newTheme: any) {
         </StackLayout>
       </FlexboxLayout>
     </StackLayout>
-  </Page>
+  </CustomPage>
 </template>
