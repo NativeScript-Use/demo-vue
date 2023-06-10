@@ -36,7 +36,7 @@ function onUseScreenOrientation() {
 </script>
 
 <template>
-  <Frame backgroundColor="transparent">
+  <Frame :backgroundColor="palette?.colors.bg">
     <CustomPage>
       <StackLayout ref="test" class="px-4">
         <Label text="NativeScript-VueUse APP" class="text-2xl font-bold mt-3" />
