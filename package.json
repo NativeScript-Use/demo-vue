@@ -8,12 +8,11 @@
     "android": "ns run android --env.watchNodeModules",
     "ios": "ns run ios --env.watchNodeModules",
     "android:debug": "ns debug android --env.watchNodeModules",
-    "ios:debug": "ns debug ios --env.watchNodeModules",
-    "postinstall": "npm link ../publish"
+    "ios:debug": "ns debug ios --env.watchNodeModules"
   },
   "dependencies": {
     "@nativescript/core": "^8.5.3",
-    "@vallemar/nativescript-vueuse": "^0.0.12",
+    "@vallemar/nativescript-vueuse": "^0.0.13",
     "nativescript-vue": "3.0.0-beta.8"
   },
   "devDependencies": {

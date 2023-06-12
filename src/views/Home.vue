@@ -4,12 +4,14 @@ import {
 } from 'nativescript-vue';
 import ElementSizeView from "./ElementSizeView.vue";
 import ColorModeView from "./ColorModeView.vue";
-import EventListenerComponent from "./EventListenerComponent.vue";
+import EventListenerView from "./EventListenerView.vue";
 import RootLayoutView from './RootLayoutView.vue';
-import ScreenOrientationComponent from './ScreenOrientationComponent.vue';
+import ScreenOrientationView from './ScreenOrientationView.vue';
 import CustomPage from '@/components/CustomPage.vue';
+import KeyboardView from './KeyboardView.vue';
 import { useColorPalette } from '@vallemar/nativescript-vueuse';
 import { Patelle } from '~/data';
+
 
 const { palette } = useColorPalette<string, Patelle>()
 
@@ -21,7 +23,7 @@ function onUseColorMode() {
 }
 
 function onUseEventListener() {
-  $navigateTo(EventListenerComponent)
+  $navigateTo(EventListenerView)
 }
 
 function onUseRootLayout() {
@@ -29,9 +31,12 @@ function onUseRootLayout() {
 }
 
 function onUseScreenOrientation() {
-  $navigateTo(ScreenOrientationComponent)
+  $navigateTo(ScreenOrientationView)
 }
 
+function onUseKeyboard() {
+  $navigateTo(KeyboardView)
+}
 </script>
 
 <template>
@@ -43,6 +48,7 @@ function onUseScreenOrientation() {
           <Button @tap="onUseElementSize" text="Use Element Size" class="mt-12 m-1"></Button>
           <Button @tap="onUseColorMode" text="Use Color Mode" class="mt-8 m-1"></Button>
           <Button @tap="onUseEventListener" text="Use Event Listener" class="mt-8 m-1"></Button>
+          <Button @tap="onUseKeyboard" text="Use Keyboard" class="mt-8 m-1"></Button>
           <Button @tap="onUseRootLayout" text="Use Root Layout" class="mt-8 m-1"></Button>
           <Button @tap="onUseScreenOrientation" text="Use Screen Orientation" class="mt-8 m-1"></Button>
         </StackLayout>
