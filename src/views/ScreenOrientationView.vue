@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import CustomPage from "@/components/CustomPage.vue";
+import { FlexboxLayout } from "@nativescript/core";
 import { useScreenOrientation } from '@vallemar/nativescript-vueuse';
 
 const {
@@ -19,7 +20,11 @@ const {
   <CustomPage>
     <ScrollView>
       <StackLayout class="p-3">
-        <Label class="text-center text-2xl">ScreenOrientation {{ orientation }}</Label>
+        <Label class="text-center text-2xl">ScreenOrientation example</Label>
+        <FlexboxLayout class=" justify-center mt-8">
+          <Label class="text-center text-xl bg-variant rounded-xl p-6">{{ orientation }}</Label>
+        </FlexboxLayout>
+
         <Button @tap="setOrientation('portrait')" class="mx-1 mt-8" text="Set portrait"></Button>
         <Button @tap="setOrientation('landscape')" class="mx-1 mt-8" text="Set landscape"></Button>
         <Button @tap="setOrientation('landscapeleft')" class="mx-1 mt-8" text="Set landscapeleft"></Button>

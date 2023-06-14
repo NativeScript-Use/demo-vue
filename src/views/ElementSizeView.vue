@@ -17,7 +17,9 @@ function changeSize() {
 <template>
   <CustomPage>
     <StackLayout class="p-4">
-      <StackLayout originY="0" ref="refView" class="bg-variant rounded-2xl p-3 text-center">
+      <Label class="text-center text-2xl">ElementSize example</Label>
+
+      <StackLayout originY="0" ref="refView" class="bg-variant rounded-2xl p-3 mt-4 text-center">
         <Label :text="`Width: ${width}`" />
         <Label :text="`Height: ${height}`" />
       </StackLayout>

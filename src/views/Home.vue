@@ -11,6 +11,14 @@ import CustomPage from '@/components/CustomPage.vue';
 import KeyboardView from './KeyboardView.vue';
 import { useColorPalette } from '@vallemar/nativescript-vueuse';
 import { Patelle } from '~/data';
+import ClipboardView from './ClipboardView.vue';
+import { Application } from '@nativescript/core';
+import { Frame } from '@nativescript/core';
+import { Utils } from '@nativescript/core';
+import { FlexboxLayout } from '@nativescript/core';
+import { ContentView } from '@nativescript/core';
+import { StackLayout } from '@nativescript/core';
+import Icon from '~/components/Icon.vue';
 
 
 const { palette } = useColorPalette<string, Patelle>()
@@ -37,20 +45,39 @@ function onUseScreenOrientation() {
 function onUseKeyboard() {
   $navigateTo(KeyboardView)
 }
+
+function onUseClipboard() {
+  $navigateTo(ClipboardView)
+}
+
+const views = [
+  { title: "Clipboard", viewComponent: ClipboardView, icon: "assignment" },
+  { title: "Element Size", viewComponent: ElementSizeView, icon: "straighten" },
+  { title: "Color Mode", viewComponent: ColorModeView, icon: "palette" },
+  { title: "Event Listener", viewComponent: EventListenerView, icon: "hearing" },
+  { title: "Keyboard", viewComponent: KeyboardView, icon: "keyboard" },
+  { title: "Root Layout", viewComponent: RootLayoutView, icon: "flip_to_back" },
+  { title: "Screen Orientation", viewComponent: ScreenOrientationView, icon: "screen_rotation_alt" },
+]
+
 </script>
 
 <template>
   <Frame :backgroundColor="palette?.colors.bg">
     <CustomPage>
       <ScrollView>
-        <StackLayout ref="test" class="px-4">
-          <Label text="NativeScript-VueUse APP" class="text-2xl font-bold mt-3" />
-          <Button @tap="onUseElementSize" text="Use Element Size" class="mt-12 m-1"></Button>
-          <Button @tap="onUseColorMode" text="Use Color Mode" class="mt-8 m-1"></Button>
-          <Button @tap="onUseEventListener" text="Use Event Listener" class="mt-8 m-1"></Button>
-          <Button @tap="onUseKeyboard" text="Use Keyboard" class="mt-8 m-1"></Button>
-          <Button @tap="onUseRootLayout" text="Use Root Layout" class="mt-8 m-1"></Button>
-          <Button @tap="onUseScreenOrientation" text="Use Screen Orientation" class="mt-8 m-1"></Button>
+        <StackLayout ref="test" class="px-2">
+          <Label text="NativeScript-VueUse APP" class="text-2xl font-bold mt-6 ml-2" />
+
+          <FlexboxLayout class="flex-wrap mt-8">
+            <StackLayout class="w-[50%] p-2 " v-for="(item, i) in views" :key="i" @tap="$navigateTo(item.viewComponent)">
+              <FlexboxLayout class="bg-variant p-2  py-4 rounded-lg flex-col">
+                <Icon width="32" class="" :icon="item.icon"></Icon>
+                <Label :text="item.title" class="text-xl font-bold mt-4" textWrap="true" style="line-height: 1;" />
+              </FlexboxLayout>
+            </StackLayout>
+
+          </FlexboxLayout>
         </StackLayout>
       </ScrollView>
     </CustomPage>

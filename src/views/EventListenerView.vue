@@ -22,7 +22,9 @@ const { cleanup } = useEventListener<StackLayout>(el, {
 <template>
   <CustomPage>
     <StackLayout class="p-4">
-      <FlexboxLayout ref="el" class="bg-variant rounded-2xl p-3 text-center h-[200] items-center justify-center">
+      <Label class="text-center text-2xl">EventListener example</Label>
+
+      <FlexboxLayout ref="el" class="bg-variant rounded-2xl p-3 mt-4 text-center h-[200] items-center justify-center">
         <Label class="text-2xl">Tap Me!</Label>
       </FlexboxLayout>
     </StackLayout>
