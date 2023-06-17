@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import CustomPage from "@/components/CustomPage.vue";
 import { ref } from "nativescript-vue";
-import { useElementSize, unrefView } from "@vallemar/nativescript-vueuse";
+import { useElementSize, unrefView } from "@nativescript-use/vue";
 
 const refView = ref()
 const { width, height } = useElementSize(refView);

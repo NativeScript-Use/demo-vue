@@ -9,7 +9,7 @@ import RootLayoutView from './RootLayoutView.vue';
 import ScreenOrientationView from './ScreenOrientationView.vue';
 import CustomPage from '@/components/CustomPage.vue';
 import KeyboardView from './KeyboardView.vue';
-import { useColorPalette } from '@vallemar/nativescript-vueuse';
+import { useColorPalette } from '@nativescript-use/vue';
 import { Patelle } from '~/data';
 import ClipboardView from './ClipboardView.vue';
 import { Application } from '@nativescript/core';

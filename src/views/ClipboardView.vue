@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import CustomPage from "@/components/CustomPage.vue";
 import { ref } from "nativescript-vue";
-import { useClipboard } from "@vallemar/nativescript-vueuse";
+import { useClipboard } from "@nativescript-use/vue";
 
 const {
   text,

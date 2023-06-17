@@ -2,7 +2,7 @@
 import CustomPage from "@/components/CustomPage.vue";
 import { ref } from "nativescript-vue";
 import { alert, StackLayout } from "@nativescript/core";
-import { useEventListener } from "@vallemar/nativescript-vueuse";
+import { useEventListener } from "@nativescript-use/vue";
 
 const el = ref()
 

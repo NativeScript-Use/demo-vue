@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useColorPalette } from '@vallemar/nativescript-vueuse';
+import { useColorPalette } from '@nativescript-use/vue';
 import { Patelle } from '~/data';
 
 const { palette } = useColorPalette<string, Patelle>()

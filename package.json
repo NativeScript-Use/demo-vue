@@ -1,5 +1,5 @@
 {
-  "name": "demo",
+  "name": "demo-vue",
   "main": "src/app.ts",
   "version": "1.0.0",
   "private": true,
@@ -11,11 +11,11 @@
     "ios:debug": "ns debug ios --env.watchNodeModules"
   },
   "dependencies": {
-    "@vallemar/nativescript-clipboard": "^0.0.1",
-    "@vallemar/nativescript-keyboard": "^0.0.1",
-    "@vallemar/nativescript-orientation": "^0.0.1",
+    "@nativescript-use/nativescript-clipboard": "file:../../packages/nativescript-clipboard",
+    "@nativescript-use/nativescript-keyboard": "file:../../packages/nativescript-keyboard",
+    "@nativescript-use/nativescript-orientation": "file:../../packages/nativescript-orientation",
     "@nativescript/core": "^8.5.3",
-    "@vallemar/nativescript-vueuse": "^0.0.16",
+    "@nativescript-use/vue": "file:../../packages/vue",
     "nativescript-vue": "3.0.0-beta.8"
   },
   "devDependencies": {

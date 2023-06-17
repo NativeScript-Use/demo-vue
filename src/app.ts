@@ -1,5 +1,5 @@
 import { createApp } from 'nativescript-vue';
-import { useColorMode, useColorPalette } from "@vallemar/nativescript-vueuse";
+import { useColorMode, useColorPalette } from "@nativescript-use/vue";
 import Home from './views/Home.vue';
 import { PALETTES, THEMES } from "~/data";
 

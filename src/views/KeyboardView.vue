@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import CustomPage from "@/components/CustomPage.vue";
 import { ref } from "nativescript-vue";
-import { useKeyboard } from "@vallemar/nativescript-vueuse";
+import { useKeyboard } from "@nativescript-use/vue";
 
 const el = ref()
 

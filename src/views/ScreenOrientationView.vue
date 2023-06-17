@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import CustomPage from "@/components/CustomPage.vue";
 import { FlexboxLayout } from "@nativescript/core";
-import { useScreenOrientation } from '@vallemar/nativescript-vueuse';
+import { useScreenOrientation } from '@nativescript-use/vue';
 
 const {
   orientation,

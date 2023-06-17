@@ -1,8 +1,8 @@
 {
-  "name": "NativeScript-Use-Vue",
+  "name": "demo-vue",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/NativeScript-Use-Vue/src",
+  "sourceRoot": "apps/demo-vue/src",
   "targets": {
     "build": {
       "executor": "@nativescript/nx:build",
@@ -54,7 +54,7 @@
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "apps/NativeScript-Use-Vue/**/*.ts"
+          "apps/demo-vue/**/*.ts"
         ]
       }
     }

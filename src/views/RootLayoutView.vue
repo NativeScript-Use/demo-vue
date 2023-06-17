@@ -4,7 +4,7 @@ import Modal from '@/components/rootLayout/Modal.vue';
 import SideBar from '@/components/rootLayout/SideBar.vue';
 import SnackBar from '@/components/rootLayout/SnackBar.vue';
 import CustomPage from "@/components/CustomPage.vue";
-import { useRootLayout } from '@vallemar/nativescript-vueuse'
+import { useRootLayout } from '@nativescript-use/vue'
 
 const { show: showBottomSheet } = useRootLayout(BottomSheet, {
   rootLayoutOption: {
