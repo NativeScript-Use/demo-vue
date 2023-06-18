@@ -9,46 +9,13 @@ import RootLayoutView from './RootLayoutView.vue';
 import ScreenOrientationView from './ScreenOrientationView.vue';
 import CustomPage from '@/components/CustomPage.vue';
 import KeyboardView from './KeyboardView.vue';
+import BreakpointsView from './BreakpointsView.vue';
+import ClipboardView from './ClipboardView.vue';
+import Icon from '~/components/Icon.vue';
 import { useColorPalette } from '@nativescript-use/vue';
 import { Patelle } from '~/data';
-import ClipboardView from './ClipboardView.vue';
-import { Application } from '@nativescript/core';
-import { Frame } from '@nativescript/core';
-import { Utils } from '@nativescript/core';
-import { FlexboxLayout } from '@nativescript/core';
-import { ContentView } from '@nativescript/core';
-import { StackLayout } from '@nativescript/core';
-import Icon from '~/components/Icon.vue';
-
 
 const { palette } = useColorPalette<string, Patelle>()
-
-function onUseElementSize() {
-  $navigateTo(ElementSizeView)
-}
-function onUseColorMode() {
-  $navigateTo(ColorModeView)
-}
-
-function onUseEventListener() {
-  $navigateTo(EventListenerView)
-}
-
-function onUseRootLayout() {
-  $navigateTo(RootLayoutView)
-}
-
-function onUseScreenOrientation() {
-  $navigateTo(ScreenOrientationView)
-}
-
-function onUseKeyboard() {
-  $navigateTo(KeyboardView)
-}
-
-function onUseClipboard() {
-  $navigateTo(ClipboardView)
-}
 
 const views = [
   { title: "Clipboard", viewComponent: ClipboardView, icon: "assignment" },
@@ -56,8 +23,9 @@ const views = [
   { title: "Color Mode", viewComponent: ColorModeView, icon: "palette" },
   { title: "Event Listener", viewComponent: EventListenerView, icon: "hearing" },
   { title: "Keyboard", viewComponent: KeyboardView, icon: "keyboard" },
+  { title: "Breakpoints", viewComponent: BreakpointsView, icon: "web_stories" },
   { title: "Root Layout", viewComponent: RootLayoutView, icon: "flip_to_back" },
-  { title: "Screen Orientation", viewComponent: ScreenOrientationView, icon: "screen_rotation_alt" },
+  { title: "Orientation", viewComponent: ScreenOrientationView, icon: "screen_rotation_alt" },
 ]
 
 </script>
@@ -85,7 +53,5 @@ const views = [
 </template>
 
 <style>
-/* .info {
-    font-size: 20;
-  } */
+
 </style>

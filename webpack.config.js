@@ -7,25 +7,36 @@ module.exports = (env) => {
   webpack.chainWebpack((config) => {
     const isPreview = !!env.preview;
     if (!isPreview) {
-      config.resolve.alias.set(
-        '@nativescript-use/vue',
-        resolve(__dirname, '../../packages/vue')
-      );
+      const packages = [
+        {
+          package: "@nativescript-use/vue",
+          path: "../../packages/vue"
+        },
+        {
+          package: "@nativescript-use/nativescript-orientation",
+          path: "../../packages/nativescript-orientation"
+        },
+        {
+          package: "@nativescript-use/nativescript-keyboard",
+          path: "../../packages/nativescript-keyboard"
+        },
+        {
+          package: "@nativescript-use/nativescript-clipboard",
+          path: "../../packages/nativescript-clipboard"
+        },
+        {
+          package: "@nativescript-use/nativescript-media-query",
+          path: "../../packages/nativescript-media-query"
+        },
+      ]
+      packages.forEach(package => (
+        config.resolve.alias.set(
+          package.package,
+          resolve(__dirname, package.path)
+        )
+      ))
 
-      config.resolve.alias.set(
-        '@nativescript-use/nativescript-orientation',
-        resolve(__dirname, '../../packages/nativescript-orientation')
-      );
 
-      config.resolve.alias.set(
-        '@nativescript-use/nativescript-keyboard',
-        resolve(__dirname, '../../packages/nativescript-keyboard')
-      );
-
-      config.resolve.alias.set(
-        '@nativescript-use/nativescript-clipboard',
-        resolve(__dirname, '../../packages/nativescript-clipboard')
-      );
     }
   });
 
