@@ -24,7 +24,7 @@
     "@nativescript-dom/vue-types": "^1.0.15",
     "@nativescript/android": "8.5.0",
     "@nativescript/ios": "8.5.2",
-    "@nativescript/preview-cli": "^1.0.2",
+    "@nativescript/preview-cli": "^1.0.5",
     "@nativescript/stackblitz": "^0.0.8",
     "@nativescript/tailwind": "^2.0.1",
     "@nativescript/types": "~8.5.0",
