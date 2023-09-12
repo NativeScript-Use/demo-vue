@@ -5,7 +5,7 @@
   "private": true,
   "preview": "https://stackblitz.com/edit/nativescrip-use-vue?file=package.json,webpack.config.js",
   "scripts": {
-    "android": "ns run android --env.watchNodeModules",
+    "android": "ns run android --env.watchNodeModules --no-hmr",
     "ios": "ns run ios --env.watchNodeModules",
     "android:debug": "ns debug android --env.watchNodeModules",
     "ios:debug": "ns debug ios --env.watchNodeModules"
@@ -13,11 +13,11 @@
   "dependencies": {
     "@nativescript-use/nativescript-clipboard": "^0.0.3",
     "@nativescript-use/nativescript-keyboard": "^0.0.1",
-    "@nativescript-use/nativescript-orientation": "^0.0.1",
     "@nativescript-use/nativescript-media-query": "^0.0.4",
-    "@nativescript-use/vue": "^0.0.6",
-    "@nativescript/core": "^8.5.4",
-    "nativescript-vue": "3.0.0-beta.8"
+    "@nativescript-use/nativescript-orientation": "^0.0.1",
+    "@nativescript-use/vue": "^0.0.7",
+    "@nativescript/core": "^8.5.9",
+    "nativescript-vue": "3.0.0-beta.9"
   },
   "devDependencies": {
     "@nativescript-dom/core-types": "^1.0.26",
