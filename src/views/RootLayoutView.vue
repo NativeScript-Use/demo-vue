@@ -24,6 +24,11 @@ const { show: showBottomSheet } = useRootLayout(BottomSheet, {
       },
     },
   },
+  on: {
+    testEmit: (data) => {
+      console.log("listening to emit from parent: onTestEmit with data.foo = " + data.foo);
+    }
+  },
   onClose: () => {
     console.log("onClose BottomSheet")
   }
@@ -48,6 +53,11 @@ const { show: showModal } = useRootLayout(Modal, {
       },
     },
   },
+  on: {
+    testEmit: (data) => {
+      console.log("listening to emit from parent: onTestEmit with data.foo = " + data.foo);
+    }
+  },
   onClose: () => {
     console.log("onClose Modal")
   }
@@ -71,6 +81,11 @@ const { show: showSideBar } = useRootLayout(SideBar, {
       },
     },
   },
+  on: {
+    testEmit: (data) => {
+      console.log("listening to emit from parent: onTestEmit with data.foo = " + data.foo);
+    }
+  },
   onClose: () => {
     console.log("onClose SideBar")
   }
@@ -92,6 +107,11 @@ const { show: showSnackbar } = useRootLayout(SnackBar, {
         duration: 300,
       },
     },
+  },
+  on: {
+    testEmit: (data) => {
+      console.log("listening to emit from parent: onTestEmit with data.foo = " + data.foo);
+    }
   },
   onClose: () => {
     console.log("onClose SnackBar")
