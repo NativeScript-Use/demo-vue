@@ -31,7 +31,7 @@ function changeContentSize() {
       <StackLayout originY="0" ref="refView" class="bg-variant rounded-2xl p-3 mt-4 text-center">
         <Label :text="`Parent width: ${width.toFixed(2)}`" />
         <Label :text="`Parent height: ${height.toFixed(2)}`" />
-        <Label :text="`Content height with margins (labels): ${fullHeight.toFixed(2)}`" />
+        <Label :text="`Content height with margins (labels): ${fullHeight.toFixed(2)}`" textWrap="true" />
       </StackLayout>
 
       <Button @tap="changeSize" text="Change parent size" class="mt-12 mx-1"></Button>
