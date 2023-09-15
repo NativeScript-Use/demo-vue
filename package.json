@@ -3,7 +3,7 @@
   "main": "src/app.ts",
   "version": "1.0.0",
   "private": true,
-  "preview": "https://stackblitz.com/edit/nativescrip-use-vue?file=package.json,webpack.config.js",
+  "preview": "https://stackblitz.com/edit/nativescrip-use-vue?file=package.json",
   "scripts": {
     "android": "ns run android --env.watchNodeModules --no-hmr",
     "ios": "ns run ios --env.watchNodeModules",
@@ -15,7 +15,7 @@
     "@nativescript-use/nativescript-keyboard": "^0.0.1",
     "@nativescript-use/nativescript-media-query": "^0.0.4",
     "@nativescript-use/nativescript-orientation": "^0.0.1",
-    "@nativescript-use/vue": "^0.0.13",
+    "@nativescript-use/vue": "^0.0.14",
     "@nativescript/core": "^8.5.9",
     "nativescript-vue": "3.0.0-beta.8"
   },
