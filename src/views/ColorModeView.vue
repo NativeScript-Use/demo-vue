@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import CustomPage from "@/components/CustomPage.vue";
 import { ListItem } from "nativescript-vue";
-import { useColorMode, useColorPalette } from "@nativescript-use/vue";
+import { useColorMode, useColorPalette, useDark } from "@nativescript-use/vue";
 import { Patelle, THEMES } from "~/data";
 
 const { schema } = useColorMode({
@@ -15,6 +15,8 @@ const { palette } = useColorPalette<string, Patelle>()
 function changeTheme(newTheme: any) {
   schema.value = newTheme
 }
+
+const isDark = useDark();
 
 </script>
 
@@ -34,7 +36,8 @@ function changeTheme(newTheme: any) {
       </ListView>
 
       <FlexboxLayout>
-        <Label text="Reactive Palette" width="auto" class="mt-8 text-lg px-2 rounded-lg" :backgroundColor=" palette?.colors.bgVariant " />
+        <Label text="Reactive Palette" width="auto" class="mt-8 py-2 text-lg px-2 rounded-lg"
+          :backgroundColor=" palette?.colors.bgVariant " />
       </FlexboxLayout>
 
       <FlexboxLayout class="justify-around mt-4">
@@ -50,6 +53,13 @@ function changeTheme(newTheme: any) {
           <Label text="textColor" :color=" palette?.colors.bg "></Label>
           <Label :text=" palette?.colors.bg " :color=" palette?.colors.bg "></Label>
         </StackLayout>
+      </FlexboxLayout>
+      <FlexboxLayout>
+        <FlexboxLayout class="mt-8 py-2 text-lg px-2 rounded-lg items-center"
+          :backgroundColor=" palette?.colors.bgVariant ">
+          <Label text="useDark" width="auto" class="text-lg" />
+          <Label :text=" isDark " @tap="isDark = !isDark" width="auto" class="text-lg ml-4" />
+        </FlexboxLayout>
       </FlexboxLayout>
     </StackLayout>
   </CustomPage>
