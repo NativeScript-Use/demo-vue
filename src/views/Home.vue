@@ -38,7 +38,7 @@ const views = [
           <Label text="NativeScript-VueUse APP" class="text-2xl font-bold mt-6 ml-2" />
 
           <FlexboxLayout class="flex-wrap mt-8">
-            <StackLayout class="w-[50%] p-2 " v-for="(item, i) in views" :key="i" @tap="$navigateTo(item.viewComponent)">
+            <StackLayout class="w-[49%] p-2 " v-for="(item, i) in views" :key="i" @tap="$navigateTo(item.viewComponent)">
               <FlexboxLayout class="bg-variant p-2  py-4 rounded-lg flex-col">
                 <Icon width="32" class="" :icon="item.icon"></Icon>
                 <Label :text="item.title" class="text-xl font-bold mt-4" textWrap="true" style="line-height: 1;" />
