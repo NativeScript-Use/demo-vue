@@ -6,7 +6,7 @@ import { PALETTES, THEMES } from "~/data";
 /* Init Color mode and Palette */
 useColorMode({
     modes: THEMES,
-    initialValue: 'dim'
+    initialValue: 'dark'
 });
 useColorPalette({ palettes: PALETTES });
 
