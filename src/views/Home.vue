@@ -8,10 +8,11 @@ import EventListenerView from "./EventListenerView.vue";
 import RootLayoutView from './RootLayoutView.vue';
 import ScreenOrientationView from './ScreenOrientationView.vue';
 import CustomPage from '@/components/CustomPage.vue';
+import FeatureItem from '@/components/FeatureItem.vue';
 import KeyboardView from './KeyboardView.vue';
 import BreakpointsView from './BreakpointsView.vue';
 import ClipboardView from './ClipboardView.vue';
-import Icon from '~/components/Icon.vue';
+import IntersectionObserverView from './IntersectionObserverView.vue';
 import { useColorPalette } from '@nativescript-use/vue';
 import { Patelle } from '~/data';
 
@@ -26,6 +27,7 @@ const views = [
   { title: "Breakpoints", viewComponent: BreakpointsView, icon: "web_stories" },
   { title: "Root Layout", viewComponent: RootLayoutView, icon: "flip_to_back" },
   { title: "Orientation", viewComponent: ScreenOrientationView, icon: "screen_rotation_alt" },
+  { title: "Intersection", viewComponent: IntersectionObserverView, icon: "screen_rotation_alt" },
 ]
 
 </script>
@@ -36,22 +38,13 @@ const views = [
       <ScrollView>
         <StackLayout ref="test" class="px-2">
           <Label text="NativeScript-VueUse APP" class="text-2xl font-bold mt-6 ml-2" />
-
           <FlexboxLayout class="flex-wrap mt-8">
             <StackLayout class="w-[49%] p-2 " v-for="(item, i) in views" :key="i" @tap="$navigateTo(item.viewComponent)">
-              <FlexboxLayout class="bg-variant p-2  py-4 rounded-lg flex-col">
-                <Icon width="32" class="" :icon="item.icon"></Icon>
-                <Label :text="item.title" class="text-xl font-bold mt-4" textWrap="true" style="line-height: 1;" />
-              </FlexboxLayout>
+              <FeatureItem  :feature="item"></FeatureItem>
             </StackLayout>
-
           </FlexboxLayout>
         </StackLayout>
       </ScrollView>
     </CustomPage>
   </Frame>
 </template>
-
-<style>
-
-</style>

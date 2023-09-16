@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 .m-icon-round {
-  font-family: "Material Icons Round", "MaterialIconsRound-Regular"; font-weight: 400;
-  font-size: 32;
+  font-family: "Material Symbols Rounded", "MaterialSymbolsRounded";
+  font-weight: 100;
+  font-size: 28;
 }
 
 .ns-light {
@@ -31,24 +32,43 @@
   --text-color: #ffe6d8;
 }
 
-Page, ListView {
+Page,
+ListView,
+.ns-modal {
   background-color: var(--bg);
+  background: var(--bg);
+}
+
+TextField,
+Label {
+  font-family: "Uber Move", "UberMoveMedium";
+  font-weight: 500;
+}
+
+.light {
+  font-family: "Uber Move", "UberMove-Light";
+  font-weight: 300;
+}
+
+.bold {
+  font-family: "Uber Move", "UberMoveBold";
+  font-weight: 700;
 }
 
 Label {
   color: var(--text-color);
 }
 
-Button{
+Button {
   border-radius: 100;
   background-color: var(--bg-variant);
   color: var(--text-color);
 }
 
-.bg{
+.bg {
   background: var(--bg);
 }
 
-.bg-variant{
+.bg-variant {
   background: var(--bg-variant);
 }

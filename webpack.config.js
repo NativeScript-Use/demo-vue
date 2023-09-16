@@ -28,6 +28,10 @@ module.exports = (env) => {
           package: "@nativescript-use/nativescript-media-query",
           path: "../../packages/nativescript-media-query"
         },
+        {
+          package: "@nativescript-use/nativescript-intersection-observer",
+          path: "../../packages/nativescript-intersection-observer"
+        },
       ]
       packages.forEach(package => (
         config.resolve.alias.set(
