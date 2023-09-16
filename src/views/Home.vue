@@ -27,7 +27,7 @@ const views = [
   { title: "Breakpoints", viewComponent: BreakpointsView, icon: "web_stories" },
   { title: "Root Layout", viewComponent: RootLayoutView, icon: "flip_to_back" },
   { title: "Orientation", viewComponent: ScreenOrientationView, icon: "screen_rotation_alt" },
-  { title: "Intersection", viewComponent: IntersectionObserverView, icon: "screen_rotation_alt" },
+  { title: "Intersection", viewComponent: IntersectionObserverView, icon: "disabled_visible" },
 ]
 
 </script>
