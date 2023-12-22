@@ -15,10 +15,11 @@
     "@nativescript-use/nativescript-keyboard": "^0.0.1",
     "@nativescript-use/nativescript-media-query": "^0.0.4",
     "@nativescript-use/nativescript-orientation": "^0.0.3",
-    "@nativescript-use/vue": "^0.0.31",
+    "@nativescript-use/nativescript-intersection-observer": "0.0.1",
+    "@nativescript-use/nativescript-task": "^0.0.1",
+    "@nativescript-use/vue": "^0.0.34",
     "@nativescript/core": "^8.5.9",
-    "nativescript-vue": "3.0.0-beta.8",
-    "@nativescript-use/nativescript-intersection-observer": "0.0.1"
+    "nativescript-vue": "3.0.0-beta.8"
   },
   "devDependencies": {
     "@nativescript-dom/core-types": "^1.0.26",

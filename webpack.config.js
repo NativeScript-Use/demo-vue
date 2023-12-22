@@ -32,6 +32,10 @@ module.exports = (env) => {
           package: "@nativescript-use/nativescript-intersection-observer",
           path: "../../packages/nativescript-intersection-observer"
         },
+        {
+          package: "@nativescript-use/nativescript-task",
+          path: "../../packages/nativescript-task"
+        },
       ]
       packages.forEach(package => (
         config.resolve.alias.set(
