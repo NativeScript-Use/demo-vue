@@ -4,7 +4,7 @@ const { resolve } = require('path');
 module.exports = (env) => {
   webpack.init(env);
 
-  webpack.chainWebpack((config) => {
+  webpack.chainWebpack(async (config) => {
     const isPreview = !!env.preview;
     if (!isPreview) {
       const packages = [
@@ -43,8 +43,6 @@ module.exports = (env) => {
           resolve(__dirname, package.path)
         )
       ))
-
-
     }
   });
 
